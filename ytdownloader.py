@@ -10,7 +10,8 @@ from threading import *
 import config
 from tkinter import messagebox
 root=Tk()
-
+photo = PhotoImage(file = "ytdownloader.png")
+root.iconphoto(False, photo)
 root.title('youtube downloader')
 root.geometry('700x350')
 
@@ -119,7 +120,7 @@ def down(link):
                             linke.delete(0,END)
                             btn['text']='TRY AGAIN'
                             btn['state']='active'
-
+                            print(e)
                             var2.set('SOME ERROR!,Try with diff. quaility')
                             root.update()
                             
